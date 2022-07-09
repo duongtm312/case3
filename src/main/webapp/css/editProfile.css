@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+    /*font-family: sans-serif;*/
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIHMaoWYAXDEC4RYhiXJYLsJcW1jkLG8eAoQ&usqp=CAU");
+}
+.img img{
+    width: 70% ;
+    height: 70%;
+}
+.box{
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    /*background: #191919;*/
+    text-align: center;
+}
+
+input[type= "text"], input[type="email"], input[type="tel"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #ffffff;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+}
+
+img{
+    height: 200px;
+    border-radius: 50%;
+}
+h1 , h2{
+    color: white;
+}
+
+.saveChanges{
+    margin-bottom: 10px;
+    height: 30px;
+    width: 200px;
+    background: none;
+    border: 2px solid #e1e1e1 ;
+    border-radius: 15px;
+}
+.saveChanges:hover{
+    background: #fcfcfc;
+    color: #131212;
+}
