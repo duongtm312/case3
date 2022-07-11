@@ -49,6 +49,13 @@ public class HomeServlet  extends HttpServlet {
                 case "match":
                     String IdProfile = req.getParameter("id");
                     matchDAO.create(name,IdProfile);
+                    break;
+                case "logout":
+                    Login.account=null;
+                    requestDispatcher = req.getRequestDispatcher("/view/login.jsp");
+                    requestDispatcher.forward(req, resp);
+                    break;
+
             }
             requestDispatcher = req.getRequestDispatcher("/view/home.jsp");
             requestDispatcher.forward(req, resp);

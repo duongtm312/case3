@@ -22,10 +22,11 @@
     <div class="side">
         <div class="header">
             <div class="avatar">
-                <img src="${requestScope['proFile'].getImgSrc()}" alt=""/>
+                <a href="/proFile"><img src="${requestScope['proFile'].getImgSrc()}" alt=""/></a>
             </div>
 
             <div class="title">${requestScope["proFile"].getName()}</div>
+            <div class="title"><a href="/home?action=logout">Log out</a></div>
 
         </div>
         <div class="menu">
@@ -37,8 +38,7 @@
 
             <c:forEach var="friends" items='${requestScope["proFileFriends"]}'>
         <div class="messages">
-                <div class="avatar">
-                    <img src="${friends.imgSrc}" alt=""/>
+                <div class="avatar"><img src="${friends.imgSrc}" alt=""/>
                 </div>
                 <a class="message" id="chatuser1" href="#chatbox">
                     <div class="user">${friends.name}</div>
