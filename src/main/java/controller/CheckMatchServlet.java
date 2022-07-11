@@ -27,6 +27,7 @@ public class CheckMatchServlet extends HttpServlet {
         ProFileDAO proFileDAO = new ProFileDAO();
         MatchDAO friendsDAO = new MatchDAO();
         FriendsDAO friendsDAO1 = new FriendsDAO();
+        RequestDispatcher requestDispatcher;
         String action = req.getParameter("action");
         MatchDAO matchDAO = new MatchDAO();
         if (action == null) {
@@ -49,12 +50,16 @@ public class CheckMatchServlet extends HttpServlet {
                 IdProfile = req.getParameter("id");
                 matchDAO.create(name,IdProfile);
                 break;
+            case "logout":
+                Login.account=null;
+                requestDispatcher = req.getRequestDispatcher("/view/login.jsp");
+                requestDispatcher.forward(req, resp);
+                break;
 
         }
 
         List<ProFile> proFileFriends;
         List<ProFile> proFileDate;
-        RequestDispatcher requestDispatcher;
         ProFile proFile = proFileDAO.findById(name);
         proFileFriends = friendsDAO.getAllMatch(name);
         proFileDate = proFileDAO.getAll();

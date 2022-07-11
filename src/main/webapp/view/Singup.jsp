@@ -24,7 +24,7 @@
         <!-- <input type="submit" name="" value="Login"> -->
 
         <button class="button" type="submit">Signup</button>
-
+        <button  class="button" type="button"><a href="/login" style="text-decoration: none">Login</a>  </button>
         <div class="icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="currentColor" class="bi bi-facebook"
                  viewBox="0 0 16 16" color="white">

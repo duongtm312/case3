@@ -26,6 +26,7 @@
             </div>
 
             <div class="title">${requestScope["proFile"].getName()}</div>
+            <div class="title"><a href="/home?action=logout">Log out</a></div>
 
         </div>
         <div class="menu">
